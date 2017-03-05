@@ -1,17 +1,17 @@
 /**
  * Created by alexandershipunov on 05/03/2017.
- */
+ **/
 
 import '../stylesheets/ui.scss';
 import Terrain from 'react-icons/lib/md/terrain';
 import SnowFlake from 'react-icons/lib/ti/weather-snow';
-import Calendar from 'react-icons/lib/fa/calendar'
+import Calendar from 'react-icons/lib/fa/calendar';
 
 const percentToDecimal = (decimal) => ((decimal * 100) + '%');
 
 const calcGoalProgress = (total, goal) => (percentToDecimal(total/goal));
 
-export const SkiDayCount = ({ total, powder, backcountry, goal }) =>  (
+export const SkiDayCount = ({ total = 50, powder = 15, backcountry = 15, goal = 100}) =>  (
             <div className="ski-day-count">
                 <div className="total-days">
                     <span>{total}</span>
@@ -35,3 +35,11 @@ export const SkiDayCount = ({ total, powder, backcountry, goal }) =>  (
                 </div>
             </div>
         );
+
+/* Default props can be also defined in following way:
+SkiDayCount.defaultProps = {
+    total: 50,
+    powder: 15,
+    backcountry: 15,
+    goal: 100
+};*/
