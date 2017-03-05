@@ -36,6 +36,13 @@ export const SkiDayCount = ({ total = 50, powder = 15, backcountry = 15, goal = 
             </div>
         );
 
+SkiDayCount.propTypes = {
+    total: React.PropTypes.number,
+    powder:  React.PropTypes.number,
+    backcountry:  React.PropTypes.number,
+    goal:  React.PropTypes.number
+};
+
 /* Default props can be also defined in following way:
 SkiDayCount.defaultProps = {
     total: 50,
