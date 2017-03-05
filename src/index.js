@@ -9,7 +9,7 @@ import {SkiDayList} from './components/SkiDayList';
 window.React = React;
 
 render(
-    /*<SkiDayList days={
+    <SkiDayList days={
         [
             {
                 resort: "Squaw Valley",
@@ -30,7 +30,7 @@ render(
                 backcountry: true
             }
         ]
-    }/>,*/
-    <SkiDayCount />,
+    }/>,
+    /*<SkiDayCount />,*/
     document.getElementById('react-container')
 );

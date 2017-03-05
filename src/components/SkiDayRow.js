@@ -2,6 +2,7 @@
  * Created by alexandershipunov on 05/03/2017.
  **/
 
+import { PropTypes } from 'react';
 import Terrain from 'react-icons/lib/md/terrain';
 import SnowFlake from 'react-icons/lib/ti/weather-snow';
 import Calendar from 'react-icons/lib/fa/calendar';
@@ -22,3 +23,10 @@ export const SkiDayRow = ({ resort, date, powder, backcountry }) => (
         </td>
     </tr>
 );
+
+SkiDayRow.propTypes = {
+    date: PropTypes.instanceOf(Date).isRequired,
+    resort:  PropTypes.string.isRequired,
+    backcountry:  PropTypes.bool,
+    powder:  PropTypes.bool
+};
