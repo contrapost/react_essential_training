@@ -3,11 +3,10 @@
  **/
 import React from 'react';
 import {render} from 'react-dom';
-import {App} from './components/App';
+import {routes} from './routes';
 
 window.React = React;
 
-render(
-    <App />,
+render(routes,
     document.getElementById('react-container')
 );
